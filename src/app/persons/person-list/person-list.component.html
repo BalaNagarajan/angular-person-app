@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="col-xs-12">
+  	<button class="btn btn-success">Search Person</button>	
+
+  </div>	
+</div>	
+<div class="row">
+    <h4 class="list-group-item-heading">FirstName LastName Email PhoneNo City Country Image </h4>
+    <a href="#" 
+       class="list-group-item clearfix" 
+       *ngFor="let person of persons">
+        	<p class="list-group-item-text"><a href="#">Detail</a> | {{ person.firstName}} | {{ person.lastName}} | {{ person.email}} | {{ person.phoneNo}} | {{ person.city}} | {{ person.country}} | <img [src] = "person.imagePath" class="img-responsive" style="max-height: 50px;"
+            /> </p>
+          
+        
+        <span class="pull-right">
+         <img src="" alt="" class="img-responsive" style="max-height: 50px;">
+        </span>	
+     </a>
+ 	<app-person-item></app-person-item>
+  
+</div>
+
+
